@@ -5,14 +5,73 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="/src/assets/styles/style.css">
+    <title>ДодоПицца</title>
+    <script src="index.js" defer type="module"></script>
+    <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 <body>
-<div class="test" style="color: blue">
-    test
+<div class="app">
+    <div class="pizza-catalog js-pizza-catalog">
+        <div class="pizza-card">
+            <div class="pizza-card_img">
+                <img src="assets/img/пепперони.webp" alt="Пепперони">
+            </div>
+            <h5 class="pizza-card_title">Пепперони</h5>
+        </div>
+        <div class="pizza-card">
+            <div class="pizza-card_img">
+                <img src="assets/img/маргарита.webp" alt="Маргарита">
+            </div>
+            <h5 class="pizza-card_title">Маргарита</h5>
+        </div>
+        <div class="pizza-card">
+            <div class="pizza-card_img">
+                <img src="assets/img/баварская.webp" alt="Баварская">
+            </div>
+            <h5 class="pizza-card_title">Баварская</h5>
+        </div>
+    </div>
+    <div class="pizza-sidebar">
+        <div class="pizza-size">
+            <h2 class="pizza-size_title">Выберите размер</h2>
+            <div class="pizza-size_img">
+                <img src="assets/img/info.png" alt="info">
+            </div>
+            <div class="pizza-size_catalog js-pizza-size_catalog">
+                <button class="pizza-size-card" id="small">Маленькая</button>
+                <button class="pizza-size-card" id="big">Большая</button>
+            </div>
+        </div>
+        <div class="pizza-topping">
+            <h3 class="pizza-topping_title">Добавить по вкусу</h3>
+            <div class="pizza-topping_catalog js-pizza-topping_catalog">
+                <div class="pizza-topping-card js-pizza-topping-card">
+                    <div class="pizza-topping-card_img">
+                        <img src="assets/img/бортик.png" alt="Сырный бортик">
+                    </div>
+                    <span class="pizza-topping-card_title">Сырный бортик</span>
+                    <span class="pizza-topping-card_price">0 ₽</span>
+                </div>
+                <div class="pizza-topping-card">
+                    <div class="pizza-topping-card_img">
+                        <img src="assets/img/моцарелла.png" alt="Сливочная моцарелла">
+                    </div>
+                    <span class="pizza-topping-card_title">Сливочная моцарелла</span>
+                    <span class="pizza-topping-card_price">0 ₽</span>
+                </div>
+                <div class="pizza-topping-card">
+                    <div class="pizza-topping-card_img">
+                        <img src="assets/img/чеддер.png" alt="Чеддер и пармезан">
+                    </div>
+                    <span class="pizza-topping-card_title">Чеддер и пармезан</span>
+                    <span class="pizza-topping-card_price">0 ₽</span>
+                </div>
+            </div>
+        </div>
+        <div class="pizza-button">
+            <button class="pizza-button_button js-button-render">Добавить в корзину за <br> 0 ₽ (0 кКалл)</button>
+        </div>
+    </div>
 </div>
-
-<script src="index.js"></script>
 </body>
 </html>

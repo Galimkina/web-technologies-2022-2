@@ -1,0 +1,16 @@
+.pizza-topping {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.pizza-topping_title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.pizza-topping_catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 20px;
+    width: 100%;
+}
