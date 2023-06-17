@@ -3,9 +3,18 @@ html {
     font-weight: 400;
 }
 
+.bold {
+    font-weight: 700;
+}
+
+.medium {
+    font-weight: 500;
+}
+
 *,
 *:before,
 *:after {
     box-sizing: border-box;
 }
+
 

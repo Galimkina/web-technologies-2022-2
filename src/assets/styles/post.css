@@ -1,0 +1,33 @@
+.post {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+.post_cards {
+    padding: 12px;
+    font-size: 30px;
+    color: #504f4f;
+}
+.post_button {
+    font-size: 30px;
+    padding: 8px 16px;
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+    color: #afafaf;
+    cursor: pointer;
+}
+.post_button:hover {
+    border: 1px solid #504f4f;
+    color: #504f4f;
+}
+.post_comment {
+    display: flex;
+    gap: 8px;
+    color: #504f4f;
+}
+#post-comments {
+    font-size: 18px;
+    border: 1px solid #504f4f;
+    border-radius: 5px;
+    padding: 12px;
+}
