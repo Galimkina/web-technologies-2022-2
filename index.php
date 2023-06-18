@@ -1,33 +1,117 @@
 <?php
+
+// 1
+echo "<b>1. </b>";
+$a = 9;
+$b = 5;
+
+function func($a, $b) {
+    if ($a >= 0 and $b >= 0) {
+        return $a - $b;
+    } else if ($a < 0 and $b < 0) {
+        return $a * $b;
+    } else {
+        return $a + $b;
+    }
+}
+echo func($a, $b);
+
+// 2
+echo "<b><p>2. </b>";
+$a = 11;
+
+switch ($a) {
+    case ($a <= 15):
+        for ($i = $a; $i <= 15; $i++) {
+            echo ($i) . ' ';
+        }
+}
+
+// 3
+echo "<b><p>3. </b>";
+$a = 4;
+$b = 2;
+
+function sum($a, $b) {
+    return $a + $b;
+}
+
+function dif($a, $b) {
+    return $a - $b;
+}
+
+function mul($a, $b) {
+    return $a * $b;
+}
+
+function div($a, $b) {
+    return $a / $b;
+}
+echo 'сумма: '.sum($a,$b).'; разность: '.dif($a,$b).'; умножение: '.mul($a,$b).'; деление: '.div($a,$b);
+
+// 4
+echo "<b><p>4. </b>";
+
+$a = 5;
+$b = 4;
+
+function mathOperation($a, $b, $operation) {
+    switch ($operation) {
+        case 'sum':
+            return sum($a, $b);
+        case 'dif':
+            return dif($a, $b);
+        case 'mul':
+            return mul($a, $b);
+        case 'div':
+            return div($a, $b);
+    }
+}
+echo 'сумма: '. mathOperation($a,$b,'sum').'; разность: '.mathOperation($a,$b,'dif').'; умножение: '.mathOperation($a,$b, 'mul').'; деление: '.mathOperation($a,$b, 'div');
+
+//5
+echo "<b><p>5. </b>";
+//1 способ
 $content = file_get_contents("./index.html");
 $year = date('Y '). 'год.';
-
-$title = str_replace('{{title}}', 'Время', $content);
-$h1 = str_replace('{{h1}}', 'Текущее Московское время', $title);
-$thisYear = str_replace('{{year}}', $year, $h1);
+$thisYear = str_replace('{{year}}', $year, $content);
 echo $thisYear;
 
-$hour = date('H ');
-$minute = date(' i');
+//2 способ
+echo $year;
+?>
 
-function func($hour)
-{
-    if ($hour == 1 or $hour == 21) {
-        return "$hour час";
-    } else if ($hour == 0 or $hour >= 5 and $hour <= 20)  {
-        return "$hour часов";
-    } else
-        return "$hour часа";
-}
-echo func($hour);
+    <!--3 способ-->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+    <p><?php echo $year?></p>
+    </body>
+    </html>
 
-function func1($minute)
-{
-    if ($minute == 1 or $minute == 21 or $minute == 31 or $minute == 41 or $minute == 51) {
-        return "$minute минута";
-    } else if ($minute == 0 or $minute >= 5 and $minute <=20 or $minute >= 25 and $minute <= 30 or $minute >= 35 and $minute <= 40 or $minute >= 45 and $minute <= 50 or $minute >= 55) {
-        return "$minute минут";
-    } else
-        return "$minute минуты";
+<?php
+
+echo "<b><p>6. </b>";
+
+$val = 2;
+$pow = 5;
+
+function power($val, $pow) {
+    if ($pow > 0) {
+        return $val * power($val, $pow - 1);
+    }
+    else if ($pow < 0) {
+        return  1 / $val * power($val, $pow + 1);
+    }
+    else if ($pow == 0) {
+        return 1;
+    }
+    else if ($val == 0) {
+        return 0;
+    }
 }
-echo func1($minute);
+echo power($val, $pow);
