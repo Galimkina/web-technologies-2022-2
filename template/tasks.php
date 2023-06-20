@@ -1,56 +1,54 @@
-<body class="tasks">
 <?php
 
 //1
 echo "<p><b>1. </b>";
 
-$i = 0;
-$n = 10;
+    $i = 0;
+    $n = 10;
 
-do
-{
+    do {
     if ($i % 2 == 1) {
-        echo $i. " - нечётное число; ";
+    echo $i. " - нечётное число; ";
     }
     elseif ($i % 2 <> 1 and $i > 0) {
-        echo $i. " - чётное число; ";
+    echo $i. " - чётное число; ";
     }
     elseif ($i == 0) {
-        echo $i. " - это ноль; ";
+    echo $i. " - это ноль; ";
     }
     $i++;
-} while ($i < $n);
+    } while ($i < $n);
 
-//2
-echo "<p><b>2. </b>";
+    //2
+    echo "<p><b>2. </b>";
 
-$array = [];
+    $array = [];
 
-$array[] = [
-        'region' => '<b>Московская область: </b>',
+    $array[] = [
+    'region' => '<b>Московская область: </b>',
     'city' => 'Москва, ', 'Зеленоград, ', 'Клин.', '<br>'
-];
-$array[] = [
-        'region' => '<b>Ленинградская область: </b>',
+    ];
+    $array[] = [
+    'region' => '<b>Ленинградская область: </b>',
     'city' => 'Санкт-Петербург, ',  'Всеволожск, ', 'Павловск, ', 'Кронштадт.', '<br>'
-];
-$array[] = [
-        'region' => '<b>Рязанская область: </b>',
+    ];
+    $array[] = [
+    'region' => '<b>Рязанская область: </b>',
     'city' => 'Рязань, ', 'Скопин, ', 'Ряжск.'
-];
+    ];
 
-foreach ($array as $key => $city) {
+    foreach ($array as $key => $city) {
     if (is_array($city)) {
-        foreach ($city as $inner_key => $inner_city) {
-            echo $inner_city;
-        }
+    foreach ($city as $inner_key => $inner_city) {
+    echo $inner_city;
     }
-}
+    }
+    }
 
-//3
-echo "<p><b>3. </b>";
+    //3
+    echo "<p><b>3. </b>";
 
-$array = [
+    $array = [
     'a' => 'a',
     'б' => 'b',
     'в' => 'v',
@@ -84,42 +82,42 @@ $array = [
     'э' => 'e',
     'ю' => 'yu',
     'я' => 'ya'
-];
+    ];
 
-$text = 'добро пожаловать!';
+    $text = 'добро пожаловать!';
 
-$new_text = strtr(mb_strtolower($text), $array);
-echo "$new_text<br>";
+    $new_text = strtr(mb_strtolower($text), $array);
+    echo "$new_text<br>";
 
-//4
-echo "<p><b>4. </b>";
+    //4
+    echo "<p><b>4. </b>";
 
-$menu = [
+    $menu = [
     'Главная',
     'Каталог' => [
-        'Пицца',
-        'Комбо',
-        'Закуски',
-        'Десерты',
-        'Напитки'
+    'Пицца',
+    'Комбо',
+    'Закуски',
+    'Десерты',
+    'Напитки'
     ],
     'О нас'
-];
+    ];
 
-echo '<ul>';
-foreach ($menu as $key => $value) {
+    echo '<ul>';
+    foreach ($menu as $key => $value) {
     if (is_array($value)) {
-        echo '<li>' . $key . '<ul>';
-        foreach ($value as $new_value) {
+    echo '<li>' . $key . '<ul>';
+            foreach ($value as $new_value) {
             echo '<li>' . $new_value . '</li>';
-        }
-        echo '</ul>' . '</li>';
+            }
+            echo '</ul>' . '</li>';
     }
     else {
-        echo '<li>' . $value . '</li>';
+    echo '<li>' . $value . '</li>';
     }
-}
-echo '</ul>';
+    }
+    echo '</ul>';
 
 //6
 echo "<p><b>6. </b>";

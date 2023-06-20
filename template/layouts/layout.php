@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="/css/index.css">
+    <title>Главная</title>
+    <link rel="stylesheet" href="./css/index1.css">
 </head>
 <body>
 <div id="menu">
@@ -14,4 +14,4 @@
 </div>
 </body>
 </html>
-<?php
+
