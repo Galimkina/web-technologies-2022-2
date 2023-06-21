@@ -7,7 +7,7 @@ function getDb() {
             "localhost",
             "root",
             "",
-            "lessons20") or dir("Ошибка подключения" . mysqli_connect_error());
+            "lessons21") or dir("Ошибка подключения" . mysqli_connect_error());
     }
     return $db;
 }
@@ -26,4 +26,10 @@ function getAssocResult($sql) {
 
 function getDatabase() {
     return getAssocResult("SELECT * FROM `catalog`");
+}
+
+function executeSql($sql) {
+    mysqli_query(getDb(), $sql) or die(mysqli_error(getDb()));
+
+    return mysqli_affected_rows(getDb());
 }
